@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+import "HoroscopResponse.proto";
+import "HoroscopRequest.proto";
+
+option csharp_namespace = "Generated";
+
+service SpringService {
+	rpc  ShowSpringSeason(HoroscopRequest) returns (HoroscopResponse);
+}
