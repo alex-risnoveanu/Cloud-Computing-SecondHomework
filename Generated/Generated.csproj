@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutumnRequest.cs" />
     <Compile Include="AutumnService.cs" />
     <Compile Include="AutumnServiceGrpc.cs" />
     <Compile Include="HoroscopRequest.cs" />
@@ -72,10 +73,13 @@
     <Compile Include="HoroscopService.cs" />
     <Compile Include="HoroscopServiceGrpc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpringRequest.cs" />
     <Compile Include="SpringService.cs" />
     <Compile Include="SpringServiceGrpc.cs" />
+    <Compile Include="SummerRequest.cs" />
     <Compile Include="SummerService.cs" />
     <Compile Include="SummerServiceGrpc.cs" />
+    <Compile Include="WinterRequest.cs" />
     <Compile Include="WinterService.cs" />
     <Compile Include="WinterServiceGrpc.cs" />
   </ItemGroup>

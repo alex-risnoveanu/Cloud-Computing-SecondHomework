@@ -1,10 +1,10 @@
 syntax = "proto3";
 
 import "HoroscopResponse.proto";
-import "HoroscopRequest.proto";
+import "WinterRequest.proto";
 
 option csharp_namespace = "Generated";
 
 service WinterService {
-	rpc  ShowWinterSeason(HoroscopRequest) returns (HoroscopResponse);
+	rpc getZodiacSign(WinterRequest) returns (HoroscopResponse);
 }

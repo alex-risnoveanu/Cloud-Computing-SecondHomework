@@ -8,7 +8,7 @@ namespace Server
 {
     internal class SpringService : Generated.SpringService.SpringServiceBase
     {
-        public override Task<HoroscopResponse> ShowSpringSeason(HoroscopRequest request, ServerCallContext context)
+        public override Task<HoroscopResponse> getZodiacSign(SpringRequest request, ServerCallContext context)
         {
             var Birthday = DateTime.Parse(request.Date);
 

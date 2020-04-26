@@ -8,7 +8,7 @@ namespace Server
 {
     internal class SummerService : Generated.SummerService.SummerServiceBase
     {
-        public override Task<HoroscopResponse> ShowSummerSeason(HoroscopRequest request, ServerCallContext context)
+        public override Task<HoroscopResponse> getZodiacSign(SummerRequest request, ServerCallContext context)
         {
             var Birthday = DateTime.Parse(request.Date);
 

@@ -12,14 +12,14 @@ namespace Generated {
   {
     static readonly string __ServiceName = "AutumnService";
 
-    static readonly grpc::Marshaller<global::Generated.HoroscopRequest> __Marshaller_HoroscopRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Generated.HoroscopRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Generated.AutumnRequest> __Marshaller_AutumnRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Generated.AutumnRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Generated.HoroscopResponse> __Marshaller_HoroscopResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Generated.HoroscopResponse.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::Generated.HoroscopRequest, global::Generated.HoroscopResponse> __Method_ShowAutumnSeason = new grpc::Method<global::Generated.HoroscopRequest, global::Generated.HoroscopResponse>(
+    static readonly grpc::Method<global::Generated.AutumnRequest, global::Generated.HoroscopResponse> __Method_getZodiacSign = new grpc::Method<global::Generated.AutumnRequest, global::Generated.HoroscopResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "ShowAutumnSeason",
-        __Marshaller_HoroscopRequest,
+        "getZodiacSign",
+        __Marshaller_AutumnRequest,
         __Marshaller_HoroscopResponse);
 
     /// <summary>Service descriptor</summary>
@@ -32,7 +32,7 @@ namespace Generated {
     [grpc::BindServiceMethod(typeof(AutumnService), "BindService")]
     public abstract partial class AutumnServiceBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::Generated.HoroscopResponse> ShowAutumnSeason(global::Generated.HoroscopRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Generated.HoroscopResponse> getZodiacSign(global::Generated.AutumnRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -62,21 +62,21 @@ namespace Generated {
       {
       }
 
-      public virtual global::Generated.HoroscopResponse ShowAutumnSeason(global::Generated.HoroscopRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Generated.HoroscopResponse getZodiacSign(global::Generated.AutumnRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return ShowAutumnSeason(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return getZodiacSign(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::Generated.HoroscopResponse ShowAutumnSeason(global::Generated.HoroscopRequest request, grpc::CallOptions options)
+      public virtual global::Generated.HoroscopResponse getZodiacSign(global::Generated.AutumnRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_ShowAutumnSeason, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_getZodiacSign, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::Generated.HoroscopResponse> ShowAutumnSeasonAsync(global::Generated.HoroscopRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Generated.HoroscopResponse> getZodiacSignAsync(global::Generated.AutumnRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return ShowAutumnSeasonAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return getZodiacSignAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::Generated.HoroscopResponse> ShowAutumnSeasonAsync(global::Generated.HoroscopRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Generated.HoroscopResponse> getZodiacSignAsync(global::Generated.AutumnRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_ShowAutumnSeason, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_getZodiacSign, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override AutumnServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -90,7 +90,7 @@ namespace Generated {
     public static grpc::ServerServiceDefinition BindService(AutumnServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_ShowAutumnSeason, serviceImpl.ShowAutumnSeason).Build();
+          .AddMethod(__Method_getZodiacSign, serviceImpl.getZodiacSign).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -99,7 +99,7 @@ namespace Generated {
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static void BindService(grpc::ServiceBinderBase serviceBinder, AutumnServiceBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_ShowAutumnSeason, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Generated.HoroscopRequest, global::Generated.HoroscopResponse>(serviceImpl.ShowAutumnSeason));
+      serviceBinder.AddMethod(__Method_getZodiacSign, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Generated.AutumnRequest, global::Generated.HoroscopResponse>(serviceImpl.getZodiacSign));
     }
 
   }

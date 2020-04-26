@@ -25,11 +25,11 @@ namespace Generated {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChNBdXR1bW5TZXJ2aWNlLnByb3RvGhZIb3Jvc2NvcFJlc3BvbnNlLnByb3Rv",
-            "GhVIb3Jvc2NvcFJlcXVlc3QucHJvdG8ySAoNQXV0dW1uU2VydmljZRI3ChBT",
-            "aG93QXV0dW1uU2Vhc29uEhAuSG9yb3Njb3BSZXF1ZXN0GhEuSG9yb3Njb3BS",
-            "ZXNwb25zZUIMqgIJR2VuZXJhdGVkYgZwcm90bzM="));
+            "GhNBdXR1bW5SZXF1ZXN0LnByb3RvMkMKDUF1dHVtblNlcnZpY2USMgoNZ2V0",
+            "Wm9kaWFjU2lnbhIOLkF1dHVtblJlcXVlc3QaES5Ib3Jvc2NvcFJlc3BvbnNl",
+            "QgyqAglHZW5lcmF0ZWRiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Generated.HoroscopResponseReflection.Descriptor, global::Generated.HoroscopRequestReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Generated.HoroscopResponseReflection.Descriptor, global::Generated.AutumnRequestReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, null));
     }
     #endregion

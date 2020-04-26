@@ -8,7 +8,7 @@ namespace Server
 {
     internal class AutumnService : Generated.AutumnService.AutumnServiceBase
     {
-        public override Task<HoroscopResponse> ShowAutumnSeason(HoroscopRequest request, ServerCallContext context)
+        public override Task<HoroscopResponse> getZodiacSign(AutumnRequest request, ServerCallContext context)
         {
             var Birthday = DateTime.Parse(request.Date);
 

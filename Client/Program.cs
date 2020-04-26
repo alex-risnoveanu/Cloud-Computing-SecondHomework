@@ -15,6 +15,11 @@ namespace Client
             var channel = new Channel($"{Host}:{Port}", ChannelCredentials.Insecure);
             var request = new HoroscopRequest();
 
+            var WinterRequest = new WinterRequest();
+            var SpringRequest = new SpringRequest();
+            var SummerRequest = new SummerRequest();
+            var AutumnRequest = new AutumnRequest();
+
             do
             {
                 Console.WriteLine("Enter your Birthday: ");
@@ -34,29 +39,29 @@ namespace Client
             {
                 case 1:
                     var Springclient = new SpringService.SpringServiceClient(channel);
-                    Console.WriteLine("Your Zodiac Sign is a Spring Sign! ");
-                    var respone1 = Springclient.ShowSpringSeason(request);
+                    SpringRequest.Date = request.Date;
+                    var respone1 = Springclient.getZodiacSign(SpringRequest);
                     Console.WriteLine("Your Zodiac Sign is {0} ", respone1.Sign);
                     break;
 
                 case 2:
-                    var Autumnclient = new AutumnService.AutumnServiceClient(channel);
-                    Console.WriteLine("Your Zodiac Sign is a Autumn Sign! ");
-                    var respone2 = Autumnclient.ShowAutumnSeason(request); ;
-                    Console.WriteLine("Your Zodiac Sign is {0} ", respone2.Sign);
+                    var Summerclient = new SummerService.SummerServiceClient(channel);
+                    SummerRequest.Date = request.Date;
+                    var respone3 = Summerclient.getZodiacSign(SummerRequest);
+                    Console.WriteLine("Your Zodiac Sign is {0} ", respone3.Sign);
                     break;
 
                 case 3:
-                    var Summerclient = new SummerService.SummerServiceClient(channel);
-                    Console.WriteLine("Your Zodiac Sign is a Summer Sign! ");
-                    var respone3 = Summerclient.ShowSummerSeason(request);
-                    Console.WriteLine("Your Zodiac Sign is {0} ", respone3.Sign);
+                    var Autumnclient = new AutumnService.AutumnServiceClient(channel);
+                    AutumnRequest.Date = request.Date;
+                    var respone2 = Autumnclient.getZodiacSign(AutumnRequest);
+                    Console.WriteLine("Your Zodiac Sign is {0} ", respone2.Sign);
                     break;
 
                 case 4:
                     var Winterclient = new WinterService.WinterServiceClient(channel);
-                    Console.WriteLine("Your Zodiac Sign is a Winter Sign! ");
-                    var respone4 = Winterclient.ShowWinterSeason(request);
+                    WinterRequest.Date = request.Date;
+                    var respone4 = Winterclient.getZodiacSign(WinterRequest);
                     Console.WriteLine("Your Zodiac Sign is {0} ", respone4.Sign);
                     break;
             }
@@ -83,18 +88,22 @@ namespace Client
         {
             if (Birthday.Month >= 03 && Birthday.Month <= 05)
             {
+                Console.WriteLine("Your Zodiac Sign is a Spring Sign! ");
                 return 1;
             }
             if (Birthday.Month >= 06 && Birthday.Month <= 08)
             {
+                Console.WriteLine("Your Zodiac Sign is a Summer Sign! ");
                 return 2;
             }
             if (Birthday.Month >= 09 && Birthday.Month <= 11)
             {
+                Console.WriteLine("Your Zodiac Sign is a Autumn Sign! ");
                 return 3;
             }
             if (Birthday.Month == 12 || Birthday.Month <= 2)
             {
+                Console.WriteLine("Your Zodiac Sign is a Winter Sign! ");
                 return 4;
             }
 
