@@ -26,6 +26,7 @@ namespace Server
                     break;
                 }
             }
+            Console.WriteLine("Your Zodiac Sign is {0} ", sign);
 
             return Task.FromResult(new HoroscopResponse() { Sign = sign });
         }

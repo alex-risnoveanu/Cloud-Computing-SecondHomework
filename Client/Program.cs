@@ -15,11 +15,6 @@ namespace Client
             var channel = new Channel($"{Host}:{Port}", ChannelCredentials.Insecure);
             var request = new HoroscopRequest();
 
-            var WinterRequest = new WinterRequest();
-            var SpringRequest = new SpringRequest();
-            var SummerRequest = new SummerRequest();
-            var AutumnRequest = new AutumnRequest();
-
             do
             {
                 Console.WriteLine("Enter your Birthday: ");
@@ -38,29 +33,38 @@ namespace Client
             switch (wichSeasone(Birthday))
             {
                 case 1:
+                    var SpringRequest = new SpringRequest();
                     var Springclient = new SpringService.SpringServiceClient(channel);
+
                     SpringRequest.Date = request.Date;
                     var respone1 = Springclient.getZodiacSign(SpringRequest);
                     Console.WriteLine("Your Zodiac Sign is {0} ", respone1.Sign);
                     break;
 
                 case 2:
+                    var SummerRequest = new SummerRequest();
                     var Summerclient = new SummerService.SummerServiceClient(channel);
+
                     SummerRequest.Date = request.Date;
                     var respone3 = Summerclient.getZodiacSign(SummerRequest);
                     Console.WriteLine("Your Zodiac Sign is {0} ", respone3.Sign);
                     break;
 
                 case 3:
+                    var AutumnRequest = new AutumnRequest();
                     var Autumnclient = new AutumnService.AutumnServiceClient(channel);
+
                     AutumnRequest.Date = request.Date;
                     var respone2 = Autumnclient.getZodiacSign(AutumnRequest);
                     Console.WriteLine("Your Zodiac Sign is {0} ", respone2.Sign);
                     break;
 
                 case 4:
+                    var WinterRequest = new WinterRequest();
                     var Winterclient = new WinterService.WinterServiceClient(channel);
+
                     WinterRequest.Date = request.Date;
+                    Winterclient.getZodiacSign(WinterRequest);
                     var respone4 = Winterclient.getZodiacSign(WinterRequest);
                     Console.WriteLine("Your Zodiac Sign is {0} ", respone4.Sign);
                     break;

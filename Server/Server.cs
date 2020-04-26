@@ -15,6 +15,10 @@ namespace Server
             get
             {
                 yield return Generated.HoroscopService.BindService(new HoroscopService());
+                yield return Generated.SummerService.BindService(new SummerService());
+                yield return Generated.AutumnService.BindService(new AutumnService());
+                yield return Generated.WinterService.BindService(new WinterService());
+                yield return Generated.SpringService.BindService(new SpringService());
             }
         }
 
