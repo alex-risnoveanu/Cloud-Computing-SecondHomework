@@ -21,9 +21,23 @@ namespace Server
                 var StartPeriod = DateTime.Parse(dates[index + 1]);
                 var FinishPeriod = DateTime.Parse(dates[index + 2]);
 
-                if ((Birthday.Month == StartPeriod.Month && Birthday.Day >= StartPeriod.Day) || (Birthday.Month == FinishPeriod.Month && Birthday.Day <= FinishPeriod.Day))
+                if (Birthday.Month == StartPeriod.Month && Birthday.Month == FinishPeriod.Month)
                 {
-                    break;
+                    if (Birthday.Day >= StartPeriod.Day && Birthday.Day <= FinishPeriod.Day)
+                    {
+                        break;
+                    }
+                }
+
+                if (StartPeriod.Month != FinishPeriod.Month)
+                {
+                    if (Birthday.Month >= StartPeriod.Month && Birthday.Month <= FinishPeriod.Month)
+                    {
+                        if ((Birthday.Month == StartPeriod.Month && Birthday.Day >= StartPeriod.Day) || (Birthday.Month == FinishPeriod.Month && FinishPeriod.Day <= FinishPeriod.Day))
+                        {
+                            break;
+                        }
+                    }
                 }
             }
             Console.WriteLine("Your Zodiac Sign is {0} ", sign);

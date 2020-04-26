@@ -64,7 +64,6 @@ namespace Client
                     var Winterclient = new WinterService.WinterServiceClient(channel);
 
                     WinterRequest.Date = request.Date;
-                    Winterclient.getZodiacSign(WinterRequest);
                     var respone4 = Winterclient.getZodiacSign(WinterRequest);
                     Console.WriteLine("Your Zodiac Sign is {0} ", respone4.Sign);
                     break;
